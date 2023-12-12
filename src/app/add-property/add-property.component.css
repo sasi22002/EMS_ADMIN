@@ -1,0 +1,44 @@
+/* Add this CSS to your component's styles or global styles */
+button {
+    padding: 10px 15px;
+    background-color: #3498db; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    float: right;
+  }
+  
+  button:hover {
+    background-color: #3498db; /* Darker green color on hover */
+  }
+
+.add_btn_container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+
+  }
+
+  .addprop{
+    width: 50%;
+    margin: auto;
+    padding: 45px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  label{
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  input{
+    margin-bottom: 20px;
+    
+  }
+
+  .btncls{
+    display: flex;
+    justify-content: flex-end;
+  }
+  

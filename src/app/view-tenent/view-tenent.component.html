@@ -1,0 +1,71 @@
+<div class="customer_info">
+    <div class="cus_col">
+      <div class="custmer_info">
+        <!-- <h2 class="head_text"><div class="material-icons">supervised_user_circle</div> <div>Manage Admin</div> </h2> -->
+        <h2 class="head_text"><div>Tenant Details</div> </h2>
+        <div class="cus_info_cont flex">
+          <ul>
+            <li class ="list_prop">
+              <p>UserName</p> <span>: <span>{{user_data.username}}</span></span>
+            </li>
+            <li class ="list_prop">
+              <p>Email</p> <span>: <span>{{user_data.email}}</span></span>
+            </li>
+            <li class ="list_prop">
+              <p>Phone Number</p> <span>: <span>{{user_data.phone_number}}</span></span>
+            </li>
+            <li class ="list_prop">
+              <p>Address </p> <span>: <span>{{user_data.address}}</span></span>
+            </li>
+            <li class ="list_prop">
+                <p>Verified </p> <span>: <span>{{response.is_docs_verified}}</span></span>
+              </li>
+            
+           
+          </ul>
+          
+        </div>
+
+        <h2 class="head_text"><div>Property Details</div> </h2>
+        <div class="cus_info_cont flex">
+          
+            <div>             
+                <table>
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>PropertyName</th>
+                      <th>PropertyCode</th>
+                      <th>PropertyAddress</th>
+                      <th>Pincode</th>
+                      <th>UPin</th>
+                      <!-- Add more headers based on your API response structure -->
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <ng-container *ngIf="apiData.length > 0; else noRecords">
+                      <tr *ngFor="let item of apiData; let i = index">
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ item.property_detail[0].property_name }}</td>
+                        <td>{{ item.property_detail[0].property_code }}</td>
+                        <td>{{ item.property_detail[0].address }}</td>
+                        <td>{{ item.property_detail[0].pincode }}</td>
+                        <td>{{ item.property_detail[0].ul_pin }}</td>
+                        <!-- Add more cells based on your API response structure -->
+                      </tr>
+                    </ng-container>
+                    <ng-template #noRecords>
+                      <tr>
+                        <td colspan="6">No records found</td>
+                      </tr>
+                    </ng-template>
+                  </tbody>
+                  
+                </table>
+              </div>
+
+        </div>
+      </div>
+    </div>
+   
+  </div>

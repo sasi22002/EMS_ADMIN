@@ -1,0 +1,59 @@
+<div>
+    <h2>Tenant List</h2>
+    <div class="add_btn_container">
+        <div >
+          <button mat-raised-button class="addcat" routerLink="/rems/manage-tenent/add-tenent" > Create Tenant </button>
+        </div>
+        <div class="search-div">
+            <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="searchText" (input)="search()">
+                <i class="fas fa-search"></i>
+        </div>
+    </div>  
+  
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>PhoneNumber</th>
+          <th>Occupation</th>
+          <th>Verified</th>
+          <th>Actions</th>
+          <!-- Add more headers based on your API response structure -->
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngIf="apiData.length > 0; else noRecords">
+
+        <tr *ngFor="let item of apiData; let i = index  else noRecords">
+          <td>{{ i+1}}</td>
+          <td>{{ item.user_data.username }}</td>
+          <td>{{ item.user_data.email }}</td>
+          <td>{{ item.user_data.phone_number }}</td>
+          <td>{{ item.occupation }}</td>
+          <td>
+            <span [ngClass]="{'verified': item.is_docs_verified, 'not-verified': !item.is_docs_verified}">
+              {{ item.is_docs_verified ? 'Verified' : 'Not Verified' }}
+            </span>
+          </td>
+          <td>
+            <!-- View icon with click event -->
+            <span class="action-icon" (click)="redirectToViewPage(item.id)">
+              View
+            </span>
+
+          </td>
+          <!-- Add more cells based on your API response structure -->
+        </tr>
+        </ng-container>
+
+        <ng-template #noRecords>
+            <tr>
+              <td colspan="6">No records found</td>
+            </tr>
+          </ng-template>
+      </tbody>
+    </table>
+  </div>
+  

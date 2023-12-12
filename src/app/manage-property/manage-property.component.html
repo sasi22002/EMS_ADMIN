@@ -1,0 +1,57 @@
+<div>
+    <h2>Property List</h2>
+
+    <div class="add_btn_container">
+        <div >
+          <button mat-raised-button class="addcat" routerLink="/rems/manage-property/add-property" > Create Property </button>
+        </div>
+        <div class="search-div">
+            <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="searchText" (input)="search()">
+                <i class="fas fa-search"></i>
+        </div>
+    </div>  
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>PropertyName</th>
+          <th>PropertyCode</th>
+          <th>PropertyAddress</th>
+          <th>Pincode</th>
+          <th>UPin</th>
+          <th>Actions</th>
+
+          <!-- Add more headers based on your API response structure -->
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngIf="apiData.length > 0; else noRecords">
+
+        <tr *ngFor="let item of apiData;let i=index">
+          <td>{{ i+1}}</td>
+          <td>{{ item.property_name }}</td>
+          <td>{{ item.property_code }}</td>
+          <td>{{ item.address }}</td>
+          <td>{{ item.pincode }}</td>
+          <td>{{ item.ul_pin }}</td>
+
+          <td>
+            <!-- View icon with click event -->
+            <span class="action-icon" (click)="redirectToproperty(item.id)">
+              View
+            </span>
+
+          </td>
+          <!-- Add more cells based on your API response structure -->
+        </tr>
+    </ng-container>
+
+    <ng-template #noRecords>
+        <tr>
+          <td colspan="6">No records found</td>
+        </tr>
+      </ng-template>
+      </tbody>
+    </table>
+  </div>
+  

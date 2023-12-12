@@ -1,0 +1,41 @@
+<!-- your-component.component.html -->
+
+<form [formGroup]="userform" class="addprop">
+    <div class="list-prop">
+        <label for="selectOption">Select Tenent:</label>
+        <select id="selectOption" name="selectOption" formControlName="tenant">
+          <option *ngFor="let option of dropdownOptions" [value]="option.id">
+            {{ option.user__username }}
+          </option>
+        </select>
+    </div>
+
+    <div class="list-prop">
+        <label for="selectOption">Select Property:</label>
+        <select id="selectOption" name="selectOption" formControlName="prop_val">
+        <option *ngFor="let option of dropdownprop" [ngValue]="option.id">
+            {{ option.property__property_name }}
+        </option>
+    </select>
+    </div>
+    
+    <div class="list-prop">
+        <label>Duration:</label>
+        <input class="inputtag" type="text" formControlName="duration_days" class="list-prop">
+    </div>
+    <div>
+        <label>Rent:</label>
+    <input  class="inputtag" type="text" formControlName="monthly_rent" >
+    </div>
+    
+    <div class="btncls">
+        <button type="button" class="addcat" (click)="addmaps()"> Map Property</button>
+
+    </div>
+    
+   
+
+    
+    
+  </form>
+  

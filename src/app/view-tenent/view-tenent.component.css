@@ -1,0 +1,111 @@
+.customer_info {
+    font-family: 'Arial', sans-serif;
+    width: 70%;
+    margin: auto;
+  }
+  
+  .cus_col {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+  
+  .head_text {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    margin: 0;
+  }
+  
+  .cus_info_cont {
+    padding: 20px;
+    
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    margin-bottom: 15px;
+  }
+  
+  
+  span {
+    color: #007BFF;
+    display: inline-block;
+  }
+  
+  cus_info_cont ul li {
+    display: flex;
+    align-items: center;
+    float: left;
+    margin-bottom: 14px;
+    font-size: 20px;
+    margin-left: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f9f9f9;
+}
+  /* Add more styles as needed */
+  
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  thead {
+    background-color: #3498db; /* Header background color */
+    color: #fff; /* Header text color */
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2; /* Alternate row background color */
+  }
+  
+  tr:hover {
+    background-color: #e0e0e0; /* Hovered row background color */
+    transition: background-color 0.3s ease;
+  }
+  .verified {
+    color: green;
+    font-weight: bold;
+  }
+
+  .not-verified {
+    color: red;
+    font-weight: bold;
+  }
+
+  .action-icon {
+    cursor: pointer;
+    margin-right: 8px;
+  }
+
+  p {
+    font-weight: bold;
+    margin: 0;
+    width: 200px;
+
+  }
+
+  .list_prop{
+    display: flex;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,31 @@
+<form [formGroup]="userform">
+    <div class="addprop">
+        <label>ULPIN</label>
+        <input type="text" formControlName="ul_pin" class="form-control">
+        <label>Property Name</label>
+        <input type="text" formControlName="property_name" class="form-control">
+        <label>Pincode</label>
+        <input type="text" formControlName="pincode" class="form-control">
+        <label>Address</label>
+        <input type="text" formControlName="address" class="form-control">
+        <label>Unit</label>
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" formControlName="units">
+            <option selected>Open this select menu</option>
+            <option value="1">1BHK</option>
+            <option value="2">2BHK</option>
+            <option value="3">3BHK</option>
+          </select>
+
+        <label>BaseRent</label>
+        <input type="text" formControlName="base_rent" class="form-control">
+        <label>Cost</label>
+        <input type="text" formControlName="cost" class="form-control">
+        <div class="btncls">
+            <button type="button" class="addcat" (click)="addprop()"> Create Property</button>
+    
+        </div>
+    </div>
+    
+    
+
+</form>

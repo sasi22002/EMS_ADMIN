@@ -1,0 +1,57 @@
+.addprop{
+    width: 65%;
+    margin: auto;
+    padding: 45px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  label{
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  input{
+    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
+    width: 200px;
+    gap: 10px;
+    margin-left: 70px;
+    
+    
+  }
+  select{
+    margin-bottom: 20px;
+    width: 200px;
+    gap: 10px;
+    margin-left: 38px;
+    
+  }
+
+  .list-prop{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.btncls{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  button {
+    padding: 10px 15px;
+    background-color: #3498db; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    float: right;
+  }
+  
+  button:hover {
+    background-color: #3498db; /* Darker green color on hover */
+  }
+
+  .inputtag{
+    width: 200px;
+    gap: 10px;
+    margin-left: 100px;
+  }

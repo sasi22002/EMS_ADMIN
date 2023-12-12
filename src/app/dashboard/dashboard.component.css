@@ -1,0 +1,23 @@
+/* Add this CSS to your component's styles or global styles */
+button {
+    margin-bottom: 30px; /* Add margin between buttons for spacing */
+    padding: 10px 15px;
+    background-color: #3498db; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+  }
+  
+  button:hover {
+    background-color: #3498db; /* Darker green color on hover */
+  }
+
+.add_btn_container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+
+  }
+
+  
